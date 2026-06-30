@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style-index.css" />
+    <script
+      src="https://kit.fontawesome.com/8475cfe1f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="rb-logo-container">
+
+        <button commandfor="drawer" command="toggle-popover" class="rb-btn-menu-wrapper" style="background: none; border: none; padding: 0; cursor: pointer;">
+        <i class="fa-solid fa-bars menu-bars rb-btn-menu"></i>
+    </button>
+        <!--
+        <img class="rb-logo-img" src="../assets/img/logo/logo.svg">
+      -->
+        <p class="rb-label-title-header">EL HAMBRE</p>
+
+        <div id="drawer" popover>
+
+        <button commandfor="drawer" command="hide-popover">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+           <ul onclick="this.closest('[popover]').hidePopover()">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Menu de comidas</a></li>
+              <li><a href="#">Ofertas especiales</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">Mi cuenta</a></li>
+          </ul>
+      </div>
+      </div>
+
+      <button class="rb-btn-theme" commandfor="cuerpo" command="--toggle-theme" id="cuerpo">
+        <i class="fa-regular fa-moon rb-icon-theme" id="iconTheme"></i>
+      </button>
+
+      <!--
+      <button class="rb-btn-register">Registrarse</button>
+    -->
+    </header>
+
+
+
+    <!-- Contenido principal-->
+
+    <main>
+      <section class="rb-section-container-1">
+        <div class="rb-presentation-container">
+          <p class="rb-label-title">
+            Comida lista con hasta 
+            <span>70% de descuento</span>
+          </p>
+          <p class="rb-label-subtitle">
+            Llévate las porciones y productos de comida del día, empacada y lista para retirar antes del cierre. ¡Aprovecha las ofertas antes de que se agoten!
+          </p>
+          <button class="rb-btn-see-menu-now">
+            ¡Ver descuentos de hoy!
+            <i class="fa-solid fa-angle-right rb-icon-arrow"></i>
+    
+          </button>
+        </div>
+        <div class="rb-image-container">
+          <img
+            src="/frontend/img/pngwing.com.png"
+            alt="Imagen de comida"
+            class="rb-food-image"
+          />
+        </div>     
+
+      </section>
+
+      <section class="rb-section-container-2">
+        <div class="rb-subcontainer">
+          <h4>Variedad</h4>
+          <p>Platos tradicionales, opciones internacionales y más, para cada gusto, cada día.</p>
+        </div>
+        <div class="rb-subcontainer">
+          <h4>Empaque</h4>
+          <p>Comidas cuidadosamente empacadas para garantizar su frescura. Listas para llevar.</p>
+
+        </div>
+        <div class="rb-subcontainer-offert">
+          <h4>Descuentos</h4>
+          <p>Disfruta deliciosas opciones a precios que sí se pueden pagar.</p>
+
+        </div>
+        <div class="rb-subcontainer-express">
+          <h4>Rescate Express</h4>
+          <p>Alimentos listos para retirar de inmediato, sin rodeos ni espera.</p>
+
+        </div>
+      </section>
+      <section class="rb-subcontainer-map">
+        <h3>Ubicanos en Arequipa</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6984.750578043849!2d-71.55269411371528!3d-16.434158334342694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1782824012982!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h2>El hambre</h2>
+        <p>Rescatamos comida del día a precios justos en Arequipa. Buena comida, cero desperdicio.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul class="rb-footer-section-list-actions">
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Terminos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul class="rb-footer-legal">
+          <li><a href="#">Terminos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

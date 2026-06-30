@@ -1,0 +1,476 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/CherrySwash-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'WalterFont';
+  src: url('/frontend/fonts/walter-font.ttf');
+}
+@font-face {
+  font-family: 'OutfitFont';
+  src: url('/frontend/fonts/outfit-font.ttf');
+}
+
+@font-face {
+  font-family: 'UnkemptFont';
+  src: url('/frontend/fonts/unkempt-font.ttf');
+}
+
+:root{
+  color-scheme: light;
+  --bg-fondo: light-dark(#fbf8f5, #1D1D1B);
+  --color-boton: light-dark(white, #1D1D1B);
+  --color-texto: light-dark(#1D1D1B, #fbf8f5);
+  --drawer-color: light-dark(#fbf8f5, #272726);
+  --footer-color: light-dark(#f6f3f1, #000000);
+  transition: 0.5s;
+}
+
+:root.dark-mode {
+  color-scheme: dark;
+  transition: 0.5s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: var(--bg-fondo);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  min-width: 384px;
+  flex-direction: column;
+  padding: 0.5rem clamp(8px, calc(18.250vw - 50.40px), 300px);
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+* Estilos para el Header
+*/
+
+header {
+  display: flex;
+  width: auto;
+  min-width: 384px;
+  justify-content: space-between;
+ padding: 0.5rem clamp(8px, calc(18.250vw - 50.40px), 300px);
+  align-items: center;
+}
+
+.rb-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+/*
+* Estilo para la barra de navegación
+* Inicio, Menu, Realizar pedido, Registrarse, etc
+*/
+
+.rb-label-title-header {
+  display: block;
+  font-family: 'WalterFont';
+  text-wrap: nowrap;
+  font-size: 1.2rem;
+  padding: 1rem 0rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.rb-btn-register {
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  padding: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.rb-btn-register:hover {
+  background-color: #b7513d;
+  transition: 0.5s;
+}
+
+.rb-label-title {
+  font-weight: 700;
+  font-size: clamp(2rem, 0.4rem + 3vw, 4rem);
+  line-height: 1.25;
+  font-family: 'UnkemptFont';
+}
+
+.rb-label-title span {
+  display: inline-block;
+  color: #F46339;
+  font-size: clamp(2rem, 0.4rem + 3vw, 4rem);
+  text-wrap: nowrap;
+}
+
+.rb-label-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: 'OutfitFont';
+  margin-top: 20px;
+  line-height: 1.25;
+}
+
+.rb-btn-theme {
+  display: block;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+}
+
+.rb-icon-theme {
+  font-size: 1rem;
+  color: var(--color-texto)
+}
+
+.rb-btn-theme:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.rb-btn-see-menu-now {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  border: none;
+  padding: 10px;
+  font-size: medium;
+  margin-top: 20px;
+  font-family: 'OutfitFont';
+  cursor: pointer;
+  border-radius: 0.3rem;
+  background-color: #F46339;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.rb-icon-arrow{
+  color: var(--color-texto)
+}
+
+.rb-btn-see-menu-now:hover,
+.rb-btn-see-menu-now:active {
+  transform: translateX(2px);
+  background-color: #ff5424;
+}
+
+.rb-btn-menu {
+  display: flex;
+  margin-bottom: 1px;;
+  align-items: center;
+  width: 1.1rem;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+.rb-btn-menu:hover{
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+}
+
+/* 
+* Estilos para la sección de presentación 
+*/
+
+.rb-section-container-1 {
+  display: grid;
+  margin: 30px 0px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  width: auto;
+  height: auto;
+  min-height: 70vh;
+  align-items: center;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
+
+.rb-presentation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rb-food-image {
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+
+.rb-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rb-section-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+  min-height: 75vh;
+  gap: 1rem;
+  align-content: center;
+}
+
+.rb-subcontainer {
+  display: flex;
+  flex-direction: column;
+  font-family: 'OutfitFont';
+  gap: 10px;
+  height: auto;
+  width: 100%;
+  background-color: #f8eee3;
+  border-radius: 1rem;
+  padding: 30px;
+  margin: 0.2rem;
+}
+.rb-subcontainer-offert {
+  display: flex;
+  font-family: 'OutfitFont';
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  background-color: #B2CF97;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 30px;
+  margin: 0.2rem;
+}
+.rb-subcontainer-express {
+  display: flex;
+  font-family: 'OutfitFont';
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  background-color: #F6D5C2;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 30px;
+  margin: 0.2rem;
+}
+
+.rb-img-papa {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/*
+* Estilos para el Footer
+*/
+
+footer {
+  display: grid;
+  grid-template-columns: 1.4fr 0.5fr 0.5fr;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  background-color: var(--footer-color);
+  flex-direction: column;
+  color: var(--color-texto);
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+footer div h3 {
+  font-family: 'WalterFont';
+  color: #ff5424;
+}
+footer div h2 {
+  font-family: 'WalterFont';
+  color: var(--color-texto);
+}
+
+footer div p {
+  font-family: 'OutfitFont';
+}
+
+.rb-footer-section-list-actions {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  flex-direction: column;
+}
+
+.rb-footer-legal {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  list-style: none;
+}
+.rb-footer-legal li a{
+  text-decoration: none;
+  font-family: 'OutfitFont';
+  color: var(--color-texto);
+  transition: color 0.3s ease;
+}
+
+.rb-footer-legal li a:hover {
+  color: #F46339;
+}
+
+.rb-footer-section-list-actions li a {
+  text-decoration: none;
+  color:var(--color-texto);
+  transition: 0.3s;
+  font-family: 'OutfitFont';
+  transition: color 0.3s ease;
+}
+.rb-footer-section-list-actions li a:hover {
+  color: #F46339;
+}
+
+.rb-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.rb-social p {
+  font-size: medium;
+  color: rgb(255, 255, 255);
+}
+
+.rb-subcontainer-map{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: auto;
+  min-height: 85vh;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.rb-subcontainer-map h3 {
+  font-family: 'WalterFont';
+}
+
+.rb-subcontainer-map iframe{
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+/*
+* Prueba de drawer
+*/
+#drawer {
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 2rem;
+  height: 100vh;
+  border: none;
+  justify-content: center;
+  background-color: var(--drawer-color);
+}
+
+#drawer button {
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 60px;
+  transition: background-color 0.5s ease;
+}
+
+#drawer button:hover{
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#drawer button i {
+  font-size: 2rem;
+  color: var(--color-texto);
+}
+
+#drawer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+#drawer ul li a{
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: 1.5rem;
+  font-family: 'OutfitFont';
+  transition: color 0.5s ease;
+}
+
+#drawer ul li a:hover {
+  color: #F46339;
+}
+
+@media (max-width: 986px) {
+
+
+  .rb-menu-btn-container {
+    display: flex;
+  }
+  .rb-presentation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rb-footer-section-list-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    gap: 10px;
+    flex-direction: column;
+    
+  }
+}
+
+@media (max-width: 880px) {
+
+   .rb-section-container-2 {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+}
